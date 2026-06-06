@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Student Academic Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🎓 Smart Student Academic Assistant</h1>
+
+    <h3>SDG 4: Quality Education</h3>
+
+    <p>Helping students plan studies, track progress, manage tasks and prepare for exams.</p>
+
+    <!-- Study Planner -->
+<div class="card">
+
+<h2>👤 Student Profile</h2>
+
+<input type="text" id="studentName"
+placeholder="Student Name">
+
+<input type="text" id="PhoneNo"
+placeholder="Phone Number">
+
+<input type="text" id="course"
+placeholder="Course Name">
+
+<input type="text" id="semester"
+placeholder="Semester">
+
+<input type="number" id="targetSGPA"
+placeholder="Target SGPA">
+
+<button onclick="saveProfile()">
+Save Profile
+</button>
+
+<div id="profileResult"></div>
+
+</div>
+    <div class="card">
+        <h2>📅 Study Planner</h2>
+
+        <input type="text" id="subjects"
+        placeholder="Enter Subjects (CN,OOP,Python)">
+
+        <input type="number" id="hours"
+        placeholder="Total Study Hours">
+
+        <button onclick="generatePlan()">
+        Generate Plan
+        </button>
+
+        <div id="planResult"></div>
+    </div>
+
+    <!-- Exam Countdown -->
+
+    <div class="card">
+        <h2>⏰ Exam Countdown</h2>
+
+        <input type="date" id="examDate">
+
+        <button onclick="calculateCountdown()">
+        Calculate
+        </button>
+
+        <div id="countdown"></div>
+    </div>
+
+    <!-- To Do List -->
+
+    <div class="card">
+        <h2>📝 To-Do List</h2>
+
+        <input type="text" id="taskInput"
+        placeholder="Enter Task">
+
+        <button onclick="addTask()">
+        Add Task
+        </button>
+
+        <ul id="taskList"></ul>
+    </div>
+
+    <!-- Progress Tracker -->
+
+    <div class="card">
+        <h2>📊 Progress Tracker</h2>
+
+        <input type="number" id="totalTopics"
+        placeholder="Total Topics">
+
+        <input type="number" id="completedTopics"
+        placeholder="Completed Topics">
+
+        <button onclick="calculateProgress()">
+        Check Progress
+        </button>
+
+        <div id="progressResult"></div>
+    </div>
+<div class="card">
+    <h2> Weekly Progress</h2>
+
+    <div class="hours-inputs">
+        <input type="number" id="mon" placeholder="Mon">
+        <input type="number" id="tue" placeholder="Tue">
+        <input type="number" id="wed" placeholder="Wed">
+        <input type="number" id="thu" placeholder="Thu">
+        <input type="number" id="fri" placeholder="Fri">
+        <input type="number" id="sat" placeholder="Sat">
+        <input type="number" id="sun" placeholder="Sun">
+    </div>
+
+    <button onclick="showProgress()">
+        Generate Weekly Graph
+    </button>
+
+    <div id="weeklyResult"></div>
+    
+    <div id="graphContainer"></div>
+</div>
+
+
+    <div class="card">
+        <h2>📚 Study Resources Hub</h2>
+        <p>Select a subject to instantly get top-tier academic reference links:</p>
+        
+        <select id="resourceSubject" style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 4px; border: 1px solid #cbd5e1;">
+            <option value="">-- Choose a Subject --</option>
+            <option value="cn">Computer Networks (CN)</option>
+            <option value="oop">Object-Oriented Programming (OOP)</option>
+            <option value="python">Python Programming</option>
+        </select>
+
+        <button onclick="getLinks()">Get Study Resources</button>
+
+        <div id="resourceResult"></div>
+    </div>
+    
+    <!-- Doubt Solver -->
+
+    <div class="card">
+        <h2>Doubt? </h2>
+
+        <textarea id="question"
+        placeholder="Ask your doubt..."></textarea>
+
+        <button onclick="answerQuestion()">
+        Ask AI
+        </button>
+
+        <div id="answer"></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
